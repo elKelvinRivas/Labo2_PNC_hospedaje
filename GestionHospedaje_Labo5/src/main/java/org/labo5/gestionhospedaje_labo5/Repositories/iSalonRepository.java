@@ -9,7 +9,7 @@ import java.util.UUID;
 public interface iSalonRepository extends iGenericRepository<Salon, UUID>{
 
     //JPA
-    public Salon findSalonByIdSalon(UUID id);
+    public Salon findSalonByIdSalon(UUID idSalon);
 
     public Salon findSalonByNombre(String nombre);
 

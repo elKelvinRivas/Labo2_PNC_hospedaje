@@ -12,17 +12,20 @@ import java.util.UUID;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "salon")
 public class Salon {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id_salon;
+    private UUID idSalon;
 
+    @Column
     private String nombre;
 
-    private String capacidad;
+    @Column
+    private Integer capacidad;
 
-    //
+    //Muchos salones pueden pertenecer a un edificio
     @ManyToOne
     @JoinColumn(name = "id_edificio", nullable = false, foreignKey = @ForeignKey(name = "FK_salon_edificio"))
     private Edificio edificio;

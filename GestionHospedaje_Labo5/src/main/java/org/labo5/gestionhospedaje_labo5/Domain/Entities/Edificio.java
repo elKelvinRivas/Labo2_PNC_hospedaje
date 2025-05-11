@@ -18,7 +18,7 @@ public class Edificio {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id_edificio;
+    private Integer idEdificio;
 
     @Column
     private String nombre;

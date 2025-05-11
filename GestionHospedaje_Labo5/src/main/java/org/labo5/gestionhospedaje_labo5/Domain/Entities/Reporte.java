@@ -18,6 +18,7 @@ public class Reporte {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id_reporte;
 
+    
     private LocalDateTime fecha_hora;
 
     private String relato_ocurrido;

@@ -15,8 +15,6 @@ public interface iPersonaRepository extends iGenericRepository<Persona, Integer>
 
     public Persona findPersonaByUsuario(String usuario);
 
-    public Persona findPersonaByPassword(String password);
-
     //Querys hibridas
     @Query("SELECT u FROM Persona u WHERE u.rol.nombre= :nombre")
     public Persona findByRolNombre(@Param("nombre") String nombre);

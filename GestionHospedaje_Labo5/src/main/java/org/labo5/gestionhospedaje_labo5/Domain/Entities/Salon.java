@@ -17,6 +17,7 @@ public class Salon {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
+    @Column(name = "id_salon")
     private UUID idSalon;
 
     @Column

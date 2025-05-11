@@ -13,6 +13,7 @@ public class Reserva {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
+    @Column(name = "id_reserva")
     private UUID id_reserva;
 
     private LocalDateTime fecha_hora_entrada;

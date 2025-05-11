@@ -25,9 +25,8 @@ public class Habitacion {
     @Column
     private String descripcion;
 
-    //Muchas habitaciones, pueden estar en un nivel
     @ManyToOne
-    @JoinColumn(name = "id_nivel", nullable = false, foreignKey = @ForeignKey(name = "FK_habitacion_nivel"))
+    @JoinColumn(name = "habitacion_id", nullable = false, foreignKey = @ForeignKey(name = "FK_habitacion_nivel"))
     private Nivel nivel;
 
 }

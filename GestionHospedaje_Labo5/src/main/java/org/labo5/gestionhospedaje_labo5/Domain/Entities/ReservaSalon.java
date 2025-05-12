@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.UUID;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -13,9 +15,8 @@ import lombok.NoArgsConstructor;
 public class ReservaSalon {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_reserva_salon", columnDefinition = "UUID")
-    private Long idReservaSalon;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID idReservaSalon;
 
     @ManyToOne
     @JoinColumn(name = "id_reserva", referencedColumnName = "id_reserva")
